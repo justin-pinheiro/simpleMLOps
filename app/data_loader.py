@@ -14,3 +14,11 @@ class DataLoader:
         X = iris.data
         y = iris.target
         return X, y
+    
+    @staticmethod
+    def get_class_name(class_index: int) -> str:
+        """
+        Get the class name for a given class index.
+        """
+        iris = datasets.load_iris()
+        return iris.target_names[class_index]
